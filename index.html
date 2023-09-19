@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="parent_container">
+      <!------------- top section -scores displayed ---------->
+      <div class="score_card" id="score-box">
+        <div class="text_box">
+          rock<br />
+          paper<br />
+          scissors<br />
+        </div>
+        <div class="computer score" >
+          <p>computer<br />score</p>
+          <span id="aiScore">0</span>
+        </div>
+        <div class="user score">
+          <p>your<br />score</p>
+          <span id="humanScore">0</span>
+        </div>
+      </div>
+      <!------------------play section ------------------------>
+      <div class="game" id="play-area">
+        <div class="lines">
+          <div class="first_line line"></div>
+          <div class="third_line line"></div>
+          <div class="second_line line"></div>
+        </div>
+        <div class="actions">
+          <div class="rock-icon action" id="rock" onclick="beginGame('rock')">
+            <img src="./images/rock.png" alt="rock" width="80px" />
+          </div>
+          <div class="scissor-icon action" id="scissor" onclick="beginGame('scissor')">
+            <img src="./images/scissor.png" alt="scissor" width="45px" />
+          </div>
+          <div class="paper-icon action" id="paper" onclick="beginGame('paper')">
+            <img src="./images/paper.png" alt="paper" width="80px" />
+          </div>
+        </div>
+      </div>
+      <!------------------result section------------------------>
+      
+      <div class="result_container" id="result-box">
+        <div class="choice_box user_box-1">
+          <div class="choice_box user_box-2">
+            <div class="choice_box user_box-3">
+              <div class="choice" id="userChoice">
+                <h3 class="choosed" id="selected">You Picked</h3>
+                <div class="result_img action" id="user-outcome"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="results">
+          <p id="result_text_1"></p>
+          <p id="result_text_2">AGAINST PC</p>
+          <button class="retry-btn play-again" id="play_again">
+            play again
+          </button>
+          <button class="retry-btn tie-up" id="tie_up">replay</button>
+        </div>
+        <div class="choice_box pc_box-1">
+          <div class="choice_box pc_box-2">
+            <div class="choice_box pc_box-3">
+              <div class="choice" id="pcChoice">
+                <h3 class="choosed" id="selected">PC Picked</h3>
+                <div class="result_img action" id="pc-outcome"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------button section -------------------------->
+      <div class="btn">
+        <button class="rules_btn buttons">rules</button>
+        <button class="next_btn buttons" id="next-btn">next</button>
+      </div>
+      <!-------------------------rules section--------------->
+      <div class="rules_box" id="game_steps">
+        <div class="close" id="close_action"><img src="./images/X.png" /></div>
+        <h3>Game Rules</h3>
+        <ul class="guidelines">
+          <li>
+            <img src="images/Rectangle 5.png" class="rectangle" />
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li>
+            <img src="images/Rectangle 5.png" class="rectangle" />
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li>
+            <img src="images/Rectangle 5.png" class="rectangle" />
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li>
+            <img src="images/Rectangle 5.png" class="rectangle" />
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="victory_game" id="win-game">
+      <img src="./images/stars.png" alt="stars" id="star" />
+      <img src="./images/cup.png" alt="trophy" id="cup" />
+      <h2 class="win-game-title">HURRAY!!</h2>
+      <h6 class="win-game-subtitle">YOU WON THE GAME</h6>
+      <button class="retry-btn large" id="play_again" onclick="restartGame()">
+        play again
+      </button>
+      <div class="btn">
+        <button class="rules_btn buttons">rules</button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
